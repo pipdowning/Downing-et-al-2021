@@ -1,0 +1,1518 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+### FUNCTIONS (use in R) ###
+
+varianceEffect <- function(se, n){(se*sqrt(n))^2}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Acanthisitta chloris ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Sherley 1990
+Location: Kowhai Bush, near Kaikoura, New Zealand South Island (42°23' S, 173°37' E)
+Years: 1980 to 1984
+Breeding season / study period: August to January
+
+Source:
+"Of nine male parents from helped nests, 89% survived until the next season, compared to 65% of 37 male parents of nests without helpers (Fisher's exact test, two tail P = 0.24). However, of nine female parents from helped nests, 89% survived as compared with 41% of 27 female parents from nests without helpers (Fisher's exact test, one tail P = 0.015)."
+
+fPair: 41 (n=27)
+fGroup: 89 (n=9)
+mPair: 65 (n=37)
+mGroup: 89 (n=9)
+
+Method: re-sight
+
+
+## FEEDING EFFORT ##
+
+Study: ibid.
+
+Source:
+Appendix 1 - feeds / hour to fledglings at first clutch nests
+but N is the number of occasions nests in a given category were watched, not the number of pairs with and without helpers (i.e. replication not at the group level)
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Acrocephalus sechellensis ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Hammers et al. 2019
+Location: Cousin Island (4°20' S, 55°40' E)
+Years: December 1995 to June 2016
+Breeding season / study period: June to September (main breeding season)
+
+Source:
+Figure 1a - female annual survival
+fPair1: 0.88 (n=530)
+fGroup1: 0.80 (n=61)
+fPair4: 0.86 (n=435)
+fGroup4: 0.86 (n=99)
+fPair7: 0.83 (n=211)
+fGroup7: 0.90 (n=69)
+fPair10: 0.76 (n=91)
+fGroup10: 0.91 (n=31)
+fPair13: 0.55 (n=31)
+fGroup13: 0.86 (n=7)
+fPair16: 0.0 (n=2)
+fGroup16: 0.75 (n=4)
+
+Figure 1b - male annual survival
+mPair1: 0.84 (n=592)
+mGroup1: 0.83 (n=97)
+mPair4: 0.82 (n=388)
+mGroup4: 0.85 (n=89)
+mPair7: 0.83 (n=190)
+mGroup7: 0.84 (n=42)
+mPair10: 0.87 (n=104)
+mGroup10: 0.91 (n=33)
+mPair13: 0.44 (n=34)
+mGroup13: 0.78 (n=9)
+
+pair weighted average:
+female = ((0.88*530) + (0.86*435) + (0.83*211) + (0.76*91) + (0.55*31) + (0.0*2)) / (530+435+211+91+31+2)
+= 0.85 (n=1300)
+male = ((0.84*592) + (0.82*388) + (0.83*190) + (0.87*104) + (0.44*34)) / (592+388+190+104+34)
+= 0.83 (n=1308)
+group weighted average:
+female = ((0.80*61) + (0.86*99) + (0.90*69) + (0.91*31) + (0.86*7) + (0.75*4)) / (61+99+69+31+7+4)
+= 0.86 (n=271)
+male = ((0.83*97) + (0.85*89) + (0.84*42) + (0.91*33) + (0.78*9)) / (97+89+42+33+9)
+= 0.85 (n=270)
+
+Method: re-sight
+
+Note:
+"When averaged across all ages, annual survival probabilities of female dominants without helpers (84%) and with helpers (86%) were similar (two proportion z-test: χ2 = 0.29, P = 0.590)"
+"When averaged across all ages, the annual survival probabilities of male dominants without helpers (82%) and with helpers (84%) were similar (two proportion z-test: χ2 = 0.71, P = 0.400)."
+
+
+## FEEDING EFFORT ##
+
+Study: van Boheemen et al. 2019
+Location: Cousin Island (4°20' S, 55°40' E)
+Years: December 1996 to June 2015
+Breeding season / study period: June to September (main breeding season)
+
+Source:
+Figure 2 - predicted feeds / hour (these are model predictions)
+pair mean = 8.5
+pair var = 8.6 (upr 95% CI), varianceEffect(((8.6-8.5)/2), 492) = 1.23
+pair N = 492
+trio mean = 8.1
+trio var = 8.3 (upr 95% CI), varianceEffect(((8.3-8.1)/2), 350) = 3.5
+trio N = 350
+four mean = 7.4
+four var = 7.9 (upr 95% CI), varianceEffect(((7.9-7.4)/2), 47) = 2.94
+four N = 47
+
+group weighted average:
+((8.1*350) + (7.4*47)) / (350+47) = 8.0
+group weighted variance:
+((3.5*350) + (2.94*47)) / (350+47) = 3.43
+total group N:
+350+47 = 397
+
+Note:
+breeders not separated by sex but "This load‐lightening effect was similar for males and females as no interaction between the sex of the dominant and the number of helpers was found (Figure 1)"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Aegithalos caudatus ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Meade et al. 2010
+Location: Rivelin Valley, UK (53°23' N, 1°34' W)
+Years: December 1995 to June 2009
+Breeding season / study period: March to June
+
+Source:
+Figure 3 - at the modal group size (see also Hatchwell et al. 2014)
+fPair = 0.39 at brood size nine
+fGroup = 0.42 at brood size nine
+mPair = 0.43 at brood size nine
+mGroup = 0.52 at brood size nine
+
+Ns from counting points on figure 3
+fPair: 36+28 = 64 (helped)
+fGroup: 37+24 = 61 (unhelped)
+= 125 females
+mPair: 37+25 = 63 (helped)
+mGroup: 39+22 = 61 (unhelped)
+= 124 males
+
+Method: re-sight
+
+Note:
+"full information was available for 256 colour-ringed individuals; 128 males and 128 females." and
+From Hatchwell et al. 2014: "At the modal brood size of nine nestlings in our study population [56,62], the effect of this load-lightening effect is to increase a male’s probability of survival to the following breeding season from 0.43 without helpers to 0.52 with helpers, i.e. a marginal effect on male survival probability of 0.09 (fig. 3 in Meade et al. [62])."
+
+
+## FEEDING EFFORT ##
+
+Study: ibid.
+
+Source:
+Figure 1b,d at brood size nine to match with survival data (square-root of the feeding rate)
+
+female pair mean = 2.67
+female pair var = varianceEffect(0.35, 91) = 11.15
+female pair N = 91
+female group mean = 2.76
+female group var = varianceEffect(0.26, 91) = 6.15
+female group N = 91
+
+male pair mean = 3.23
+male pair var = varianceEffect(0.08, 91) = 0.58
+male pair N = 91
+male group mean = 2.72
+male group var = varianceEffect(0.08, 91) = 0.58
+male group N = 91
+
+Note:
+n = 267 individual birds at 182 nests over 14 years therefore assume n = 91 for pairs and groups (i.e. 182/2), which is consistent with using whole model n to estimate survival values at brood size nine
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Aphelocoma coerulescens ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Woolfenden & Fitzpatrick 1984
+Location: Archbold Biological Station, Florida (27°11' N, 81°21' W)
+Years: 1970 to 1979
+Breeding season / study period: mid-March to mid-June
+
+Source:
+Table 9.4 (breeders not separated by sex)
+fPair: 77 (n = 177/2 = 88)
+fGroup: 85 (n = 399 / 2 = 173)
+mPair: 77 n = 177/2 = 88)
+mGroup: 85 (n = 399 / 2 = 173)
+
+Method: re-sight
+
+Note:
+in Woolfenden & Fitzpatrick 1990 it says: "Mortality of breeders averages 21% annually, for both males and females (186 deaths in 883 breeder-years)." p. 258
+
+
+## FEEDING EFFORT ##
+
+Study: McGowan & Woolfenden 1990
+location: Archbold Biological Station, Florida (27°11' N, 81°21' W)
+years: 1983 to 1984
+breeding season / study period: mid-March to mid-June
+
+Source:
+Table 2 - feeds to fledglings per hour
+
+female pair mean = 4.98
+female pair var = 2.21 (sd) = 4.88
+female pair N = 4
+female group mean = 3.01
+female group var = 1.36 (sd) = 1.85
+female group N = 11
+
+male pair mean = 3.82
+male pair var = 0.88 (sd) = 0.77
+male pair N = 4
+male group mean = 3.43 
+male group var = 1.37 (sd) = 1.88
+male group N = 11
+
+total helper effort = 10.51-(3.01+3.43) = 4.07
+total helper var = 3.58 (sd) = 12.82
+total N = 11 (i.e. 11 groups with helpers)
+
+Note:
+also possible to calculate average helper effort from Figure 4a
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Campylorhynchus griseus ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Austad & Rabenold 1986
+Location: Hato Masaguaral, Venezuela (8°30' N, 67°36' W)
+Years: 1982 to 1984
+Breeding season / study period: wet and dry seasons
+
+Source:
+Table 2
+fPair: 0.73 (n=66)
+fGroup: 0.89 (n=37)
+mPair: 0.71 (n=72)
+mGroup: 0.86 (n=36)
+
+Method: re-sight
+
+Note:
+"breeding females showed significantly increased survivorship when helpers were present, and breeding males showed a nearly significant increase (p = .04 and .07, respectively; G-test)."
+helper survival data also reported (Table 2 and Table 3)
+
+
+## FEEDING EFFORT ##
+
+Study: Austad & Rabenold 1985
+Location: Hato Masaguaral, Venezuela (8°30' N, 67°36' W)
+Years: 1982 to 1983
+Breeding season / study period: wet and dry seasons
+
+Source:
+Figure 4 but can't use since don't know what error bars are
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+					### Ceryle rudis ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Reyer 1984
+Location: Winam Gulf, Lake Victoria, Kenya (0°21' S, 34°18' E)
+Years: to (X breeding seasons)
+Breeding season / study period:  to 
+
+Source:
+Table 3 - pair and group here correspond to ≤ 1 helper vs. ≥ 2 helpers
+fPair: 44.8 (n=29)
+fGroup: 85.7 (n=14)
+mPair: 58.6 (n=29)
+mGroup: 64.3 (n=14)
+
+Method: re-sight
+
+Note:
+male helper survival also reported
+
+
+## FEEDING EFFORT ##
+
+Study: ibid.
+
+Source:
+Figure 2b - number of fish / day to nestlings
+
+female pair mean = 11.0
+female pair var = 14.3 (upr 95% CI), varianceEffect(((14.3-11)/2), 9) = 24.50
+female pair N = 9
+female group mean = 3.9
+female group var = 7.6 (upr 95% CI), varianceEffect(((7.6-3.9)/2), 4) = 13.69
+female group N = 4
+
+male pair mean = 12.0
+male pair var = 14 (upr 95% CI), varianceEffect(((14-12)/2), 11) = 11
+male pair N = 11
+male group mean = 9.6
+male group var = 18.3 (upr 95% CI), varianceEffect(((18.3-9.6)/2), 4) = 75.69
+male group N = 4
+
+total helper effort = ((15.0*9) + ((7.0+6.6)*9)) / (9+9) = 14.3
+total helper var = ((varianceEffect(((17-15.0)/2), 9)*9) + (((varianceEffect(((10-7.0)/2), 6) + varianceEffect(((10.8-6.6)/2), 12))/2)*9)) / (9+9) = 21.11
+total N = 9+9 = 18
+
+Note:
+comparing groups with 2 or less helpers vs. pairs with more than two helpers
+also possible to calculate average helper effort from Figure 2b
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+					### Climacteris rufa ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Luck 2001
+Location: Dryandra Woodland, Western Australia (32°45' S, 116°55' E)
+Years: 1997 to 1999
+Breeding season / study period: August to January
+
+Source:
+Table 6
+fPair: 0.71 (n=23, se=0.09)
+fTrio: 0.76 (n=17, se=0.09)
+fFour: 0.80 (n=20, se=0.11)
+mPair: 0.71 (n=23, se=0.09)
+mTrio: 0.76 (n=17, se=0.09)
+mFour: 0.87 (n=20, se=0.09)
+
+group weighted averages:
+female = ((0.76*17) + (0.80*20)) / (17+20) = 0.78 (n=37)
+male = ((0.76*17) + (0.87*20)) / (17+20) = 0.82 (n=37)
+
+Method: re-sight
+
+
+## FEEDING EFFORT ##
+
+Study: ibid.
+
+Source:
+Appendix 1: % contribution to nestling provisioning
+
+female pair mean = 51.5
+female pair var = varianceEffect(3.34, 23) = 256.6
+female pair N = 23
+
+female trio mean = 37.8
+female trio var = varianceEffect(4.13, 19) = 324.1
+female trio N = 19
+
+female four mean = 36.3
+female four var = varianceEffect(3.24, 16) = 168.0
+female four N = 16
+
+female five mean = 28.4
+female five var = varianceEffect(1.74, 17) = 51.5
+female five N = 17
+
+female six mean = 19.8
+female six var = varianceEffect(1.93, 18) = 67.1
+female six N = 18
+
+female seven mean = 29.6
+female seven var = varianceEffect(4.1, 7) = 117.7
+female seven N = 7
+
+female eight mean = 27.7
+female eight var = varianceEffect(1.85, 2) = 6.9
+female eight N = 2
+
+male pair mean = 48.5
+male pair var = varianceEffect(3.34, 23) = 256.6
+male pair N = 23
+
+male trio mean = 39.2
+male trio var = varianceEffect(3.49, 19) = 231.4
+male trio N = 19
+
+male four mean = 28.4
+male four var = varianceEffect(3.22, 16) = 165.9
+male four N = 16
+
+male five mean = 27.7
+male five var = varianceEffect(3.03, 17) = 156.1
+male five N = 17
+
+male six mean = 23.7
+male six var = varianceEffect(2.91, 18) = 152.4
+male six N = 18
+
+male seven mean = 13.6
+male seven var = varianceEffect(2.8, 17) = 133.3
+male seven N = 7
+
+male eight mean = 14.8
+male eight var = varianceEffect(7.4, 2) = 109.5
+male eight N = 2
+
+female group mean = ((37.8*19)+(36.3*16)+(28.4*17)+(19.8*18)+(29.6*7)+(27.7*2))/(19+16+17+18+7+2) = 30.4
+female group var = ((varianceEffect(4.13, 19) * 19) + (varianceEffect(3.24, 16) * 16) + (varianceEffect(1.74, 17) * 17) + (varianceEffect(1.93, 18) * 18) + (varianceEffect(4.1, 7) * 7) + (varianceEffect(1.85, 2) * 2)) / (19+16+17+18+7+2) = 148.9
+female group N = 79
+
+male group mean = ((39.2*19)+(28.4*16)+(27.7*17)+(23.7*18)+(13.6*7)+(14.8*2))/(19+16+17+18+7+2) = 28.1
+male group var = ((varianceEffect(3.49,19)*19) + (varianceEffect(3.22,16)*16) + (varianceEffect(3.03,17)*17) + (varianceEffect(2.91,18)*18) + (varianceEffect(2.8,17)*17) + (varianceEffect(7.4,2)*2)) / (19+16+17+18+7+2) = 189.03
+male group N = 79
+
+total helper effort (weighted average):
+27.6 * 9 = 248.4
+((((18*11)+(17*2)) / (11+2)) * 2 ) * 19 = 678.1538
+((((21.7*8)+(17.4*8)+(13.5*8)) / (8+8+8)) * 3 ) * 16 = 841.6
+((((19*15)+(16.9*15)+(12.8*9)+(10.3*11)) / (15+15+9+11)) * 4 ) * 17 = 1043.12
+((((9.8*7)+(12.7*7)+(11.3*5)+(11*3)+(13.1*7)) / (7+7+5+3+7)) * 5 ) * 18 = 1051.138
+(248.4 + 678.1538 + 841.6 + 1043.12 + 1051.138) / (9 + 19 + 16 + 17 + 18) = 48.89129
+# note that N is group size
+
+total helper effort (simple average):
+((27.6*9) + ((18+17)*19) + ((21.7+17.4+13.5)*16) + ((19+16.9+12.8+10.3)*17) + ((9.8+12.7+11.3+11+13.1)*18)) / (9+19+16+17+18) = 48.10
+
+total helper var:
+varianceEffect(5.19,9)*9 = 2181.824
+((((varianceEffect(3.25,11)*11) + (varianceEffect(6.51,2)*2)) /  (11+2)) * 2) * (19) = 4231.396
+((((varianceEffect(1.58,8)*8) + (varianceEffect(2.16,8)*8) + (varianceEffect(2.49,8)*8)) /  (8+8+8)) * 3) * (16) = 1710.349
+((((varianceEffect(1.97,15)*15) + (varianceEffect(2.42,15)*15) + (varianceEffect(1.99,9)*9) + (varianceEffect(1.07,11)*11)) /  (15+15+9+11)) * 4) * (17) = 3604.263
+((((varianceEffect(2.09,7)*7) + (varianceEffect(3.06,7)*7) + (varianceEffect( 3.13,5)*5) + (varianceEffect( 5.15,3)*3) + (varianceEffect(1.75,7)*7)) /  (18)) * 5) * (7+7+5+3+7) = 10524.91
+(2181.824 + 4231.396 + 1710.349 + 3604.263 + 10524.91) / (9+19+16+17+18) = 281.6803
+
+total N = 9+19+16+17+18 = 79
+
+Note:
+n groups comes from breeder n for a given group size and calculations use male helper values if group size reported > number of helper types for a given group size
+also possible to calculate average helper effort
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Corvus brachyrhynchos ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Caffrey 1999
+Location: Encino, California, USA (34°10' N, 118°29' W)
+Years: 1985 to 1990
+Breeding season / study period: March to August
+
+Source:
+"Females assisted by helpers during the breeding season did not experience increased survivorship during the subsequent year (0 deaths / 8 assisted females, 1 death / 38 unassisted females; X2 = 0.21, P > 0.50)... Having assistance during the previous breeding season did not increase the likelihood of surviving to the next breeding season for males, either (2 deaths / 24 assisted males, 1 death / 55 unassisted males; X2= 1.76, P > 0.10)."
+
+fPair: 97 (n=38)
+fGroup: 100 (n=8)
+mPair: 98 (n=55)
+mGroup: 92 (n=24)
+
+Method: re-sight
+
+
+## FEEDING EFFORT ##
+
+Study: ibid.
+
+Source:
+Table 1 - trips per hour (nestlings)
+
+female pair mean = 1.4
+female pair var = varianceEffect(0.27, 3) = 0.22
+female pair N = 3
+
+female group mean = 0.6
+female group var = varianceEffect(0.23, 3) = 0.16
+female group N = 3
+
+male pair mean = 2.0
+male pair var = varianceEffect(0.44, 3) = 0.58
+male pair N = 3
+
+male group mean = 2.0
+male group var = varianceEffect(0.28, 4) = 0.31
+male group N = 4
+
+helper mean = 1.6
+helper var = varianceEffect(0.27, 5) = 0.37
+helper N = 5
+
+Note:
+Table 1 also has data on the proportion of total feeding trips
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Erythropygia coryphaeus ###
+
+# ANNUAL SURVIVAL #
+
+Study: Lloyd et al. 2016
+Location: Koeberg Nature Reserve, South Africa (33°41' S, 18°26' E)
+Years: 2001 to 2008
+Breeding season / study period: August to October
+
+Source:
+Figure 2
+fPair: 0.76 (95%CI=0.72-0.80)	# no help
+fPair: 0.73 (95%CI=0.65-0.81)	# lost help
+fGroup: 0.79 (95%CI=0.71-0.86)
+
+mPair: 0.76 (95%CI=0.72-0.80)	# no help
+mPair: 0.73 (95%CI=0.65-0.81)	# lost help
+mGroup: 0.79 (95%CI=0.71-0.86)
+
+pair averages:
+female = (0.76 + 0.73) / 2 = 0.75
+male = (0.76 + 0.73) / 2 = 0.75
+
+Ns from:
+"Data on 364 individuals were included in the survival analysis, comprising 206 males (67 of which acted as helpers in one or more years) and 158 females."
+"12–20% of pairs breeding with the assistance of one (typically) or more helpers in any year"
+therefore Ns:
+fPair: 126 	# 0.8*158
+fGroup: 32 	# 0.2*158
+mPair: 111 	# 0.8*(206-67)
+mGroup: 28 	# 0.2*(206-67)
+
+Method: mark-recapture
+
+Note:
+breeders not separated by sex but models including a sex effect on survival received low support
+
+
+## FEEDING EFFORT ##
+
+Study: Lloyd et al. 2009
+Location: Koeberg Nature Reserve, South Africa (33°41' S, 18°26' E)
+Years: 2000 to 2007
+Breeding season / study period: August to October
+
+Source:
+Figure 3 - feeds / nestling / hour
+
+female pair mean = ((2.8*4)+(1.9*10)+(4.9*15)+(4.1*9)) / (4 + 10 + 15 + 9) = 3.70
+female pair var =((4*4)+(0.4*10)+(15*15)+(0.36*9)) / (4 + 10 + 15 + 9) = 6.53
+female pair N = 4 + 10 + 15 + 9 = 38
+
+female group mean = ((0.6*3) + (0.81*6) + (4.6*6) + (3.9*4)) / (3 + 6 + 6 + 4) = 2.62
+female group var = ((0.12*3) + (0.24*6) + (0.24*6) + (0.16*4)) / (3 + 6 + 6 + 4) = 0.20
+female group N = 3 + 6 + 6 + 4 = 19
+
+male pair mean = ((3.2*4) + (3.1*10) + (4.2*15) + (3*9)) / (4 + 10 + 15 + 9) = 3.52
+male pair var = ((4.8*4) + (2.5*10) + (1.35*15) + (2.25*9)) / (4 + 10 + 15 + 9) = 2.23
+male pair N = 38
+
+male group mean = ((4.4*3) + (3*6) + (3.8*6) + (3.8*4)) / (3 + 6 + 6 + 4) = 3.64
+male group var = ((0.8*3) + (0.96*6) + (3.84*6) + (1*4)) / (3 + 6 + 6 + 4) = 1.85
+male group N = 19
+
+helper mean = ((3.0*3) + (2.1*6) + (2.9*6) + (3.0*4)) / (3 + 6 + 6 + 4) = 2.68
+helper var = ((varianceEffect(0.6,3)*3) + (varianceEffect(0.2,6)*6) + (varianceEffect(0.5,6)*6) + (varianceEffect(0.2,4)*4)) / (3+6+6+4) = 0.75
+helper N = 19
+
+Note:
+weighted means calculated (and variance from se) to capture average feeding effort across the nestling period in different brood sizes, but N's may not independent at day two and day nine after hatching (not enough information to tell)
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+					### Malurus coronatus ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Kingma et al. 2010
+Location: Mornington Wildlife Sanctuary, north-west Australia (17°31' S, 126°6' E)
+Years: 2006 to 2008
+Breeding season / study period: March to September
+
+Source:
+Figure 2a
+fPair: 0.55 (n=41, se=0.07)
+fTrio: 0.75 (n=28, se=0.09)
+fFour: 0.89 (n=19, se=0.07)
+mPair: 0.55 (n=41, se=0.07)
+mTrio: 0.75 (n=28, se=0.09)
+mFour: 0.89 (n=19, se=0.07)
+
+group weighted averages:
+female = 0.81 (n=47)
+male = 0.81 (n=47)
+
+Method: mark-recapture
+
+Note:
+survival is measured as Pr[sx to next breeding attempt] and breeders not separated but "Males and females were analysed together by adding ‘sex’ as a factor, but survival was not different between males and females (Wald = 0.04, P = 0.84) and effects of group size on survival did not depend on breeder sex (interaction effect: Wald = 0.02, P = 0.99)."
+
+
+## FEEDING EFFORT ##
+
+Study: ibid.
+
+Source:
+Figure 2a - feeding visits / hour
+pair mean = 6.3
+pair var = varianceEffect(0.2, 33) = 1.32
+pair N = 33
+trio mean = 4.6
+trio var = varianceEffect(0.25, 19) = 1.89
+trio N = 19
+four+ mean = 4.9
+four+ var = varianceEffect(0.25, 18) = 1.13
+four+ N = 18
+
+group weighted averages:
+mean = ((4.6*19)+(4.9*18)) / (19+18) = 4.8 (n=37)
+var = ((1.89*19)+(1.13*18)) / (19+18) = 1.52
+
+Note:
+not separated by sex but "neither did effects of group size or number of helpers on breeder feeding rate depend on sex of the breeder (interaction effects; in both models Wald < 0.80 and P > 0.67)"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+					### Malurus cyaneus ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Cockburn et al. 2008
+Location: Australian National Botanic Gardens, Canberra (35°16' S, 149°6' E)
+Years: 1988 to 2007
+Breeding season / study period: September to March
+
+Source:
+Figure 6
+fPair: 0.67 (n=476)
+fGroup: 0.78 (n=375)
+mPair: 0.69 (n=476)
+mGroup: 0.70 (n=375)
+
+Method: re-sight
+
+Note:
+p value from Table 3
+
+
+## FEEDING EFFORT ##
+
+Study: Russell et al. 2008
+Location: Campbell Park, Canberra (35°16' S, 149°9' E)
+Years: 2003 to 2004
+Breeding season / study period: September to March
+
+Source:
+Figure 1a - maternal feeds per hour
+female pair mean = 8.7
+female pair var = varianceEffect(0.8, 12) = 7.68
+female pair N = 12
+female group mean = 5.2
+female group var = varianceEffect(0.9, 8) = 6.48
+female group N = 8
+
+
+Study: Dunn & Cockburn (1996)
+Location: Australian National Botanic Gardens, Canberra (35°16' S, 149°6' E)
+Years: 1988 to 2007
+Breeding season / study period: September to March
+
+Source:
+Figure 3 - ln transformed nest visits / hour
+male pair mean = 1.8
+male pair var = varianceEffect(0.1, 14) = 0.14
+male pair N = 14
+male group mean = ((1.65*13)+(1.6*5))/(13+5) = 1.64
+male group var = ((varianceEffect(0.1, 13) * 13) + (varianceEffect(0.1, 5) * 5)) / (13+5) = 0.11
+male group N = 18
+
+Note:
+the sample sizes in figure 3 are the number of hours of observations associated with each data point, not the number of pairs / groups observed
+Figure 4 has data on the proportion of total feeding trips
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+					### Malurus elegans ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Lejeune et al. 2016
+Location: Smithbrook Nature Reserve, Western Australia (34°20' S, 116°10' E)
+Years: 2008 to 2015
+Breeding season / study period: October to January
+
+Source:
+Figure 3a - female breeder
+fPairF: 0.72 (n=294, se=0.03)
+fTrioF: 0.66 (n=132, se=0.05)
+fFourF: 0.79 (n=43, se=0.06)
+fFiveF: 0.90 (n=10, se=0.18)
+fPairM: 0.68 (n=165, se=0.04)
+fTrioM: 0.73 (n=171, se=0.03)
+fFourM: 0.78 (n=101, se=0.04)
+fFiveM: 0.62 (n=42, se=0.08)
+
+Figure 3b - male breeder
+mPairF: 0.74 (n=310, se=0.02)
+mTrioF: 0.77 (n=136, se=0.03)
+mFourF: 0.84 (n=42, se=0.08)
+mFiveF: 0.67 (n=9, se=0.14)
+mPairM: 0.77 (n=165, se=0.03)
+mTrioM: 0.73 (n=182, se=0.04)
+mFourM: 0.74 (n=104, se=0.05)
+mFiveM: 0.85 (n=46, se=0.07)
+
+weighted averages:
+female pair = 0.71 (n=459)
+((0.72*294)+(0.68*165)) / (294+165)
+female group = 0.72 (n=499)
+((0.66*132)+(0.79*43)+(0.9*10)+(0.73*171)+(0.78*101)+(0.62*42)) / (132+43+10+171+101+42)
+male pair = 0.75 (n=475)
+((0.74*310)+(0.77*165)) / (310+165)
+male group = 0.76 (n=519)
+((0.77*136)+(0.84*42)+(0.67*9)+(0.73*182)+(0.74*104)+(0.85*46)) / (136+42+9+182+104+46)
+
+Method: re-sight
+
+Note:
+Figure 3 has data on helper feeding rates (by sex)
+
+
+## FEEDING EFFORT ##
+
+Study: Russell & Rowley (2000)
+Location: Smithbrook Nature Reserve, Western Australia (34°20' S, 116°42' E)
+Years: 2008 to 2015
+Breeding season / study period: October to January
+
+Source:
+Table 9, but sample sizes not reported
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Malurus melanocephalus ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Varian-Ramos et al. 2010
+Location: Herberton Shire Reservoirs, Queensland, Australia (17°22' S, 145°25' E)
+Years: 1998 to 2000 and 2003 to 2007
+Breeding season / study period: October to February
+
+Source:
+"the presence of an auxiliary did not have an effect on female survival (Table 2) with 58.7% of females without auxiliaries surviving (95% CI = 52.8–64.4%) and 59.9% of females with auxiliaries surviving (95% CI = 51.4–67.8%)"
+
+fPair: 58.7 (95% CI = 52.8–64.4)
+fGroup: 59.9 (95% CI = 51.4–67.8)
+"In our population approximately 20% of groups have at least one auxiliary male and only around 2% of groups have two or more auxiliaries"
+total n = 226
+therefore Ns:
+fPair: 0.78 * 226 = 176
+fGroup: 0.22 * 226 = 50
+
+Method: mark-recapture
+
+
+Study: Potticary et al. 2016
+Location: Herberton Shire Reservoirs, Queensland, Australia (17°22' S, 145°25' E)
+Years: 2005 to 2012
+Breeding season / study period: October to February
+
+Source:
+Figure 4 (assume error is se based on other figs and Appendix Table 2)
+mPair05: 0.45 (se=0.05)
+mGroup05: 0.72 (se=1.0)
+mPair06: 0.44 (se=0.06)
+mGroup06: 0.67 (se=0.13)
+mPair07: 0.53 (se=0.06)
+mGroup07: 0.64 (se=0.12)
+mPair08: 0.53 (se=0.07)
+mGroup08: 0.52 (se=0.13)
+mPair09: 0.72 (se=0.06)
+mGroup09: 0.55 (se=0.13)
+mPair10: 0.62 (se=0.06)
+mGroup10: 0.57 (se=0.12)
+mPair11: 0.74 (se=0.06)
+mGroup11: 0.65 (se=0.77)
+
+averages:
+male pair = 0.58
+mean(c(0.45, 0.44, 0.53, 0.53, 0.72, 0.62, 0.74))
+male group = 0.62
+mean(c(0.72, 0.67, 0.64, 0.52, 0.55, 0.57, 0.65))
+
+Ns from: "In the 2011–2012 field season, 10% (8/80) of pairs at Moomin and 27% (31/ 115) of pairs at Kalinvale had helpers (i.e. bred in groups)."
+total n = 515 and ~ 20% have auxiliaries, therefore Ns:
+mPair: 0.8 * 515 = 412
+mGroup: 0.20 * 515 = 103
+
+Method: mark-recapture
+
+Note: 
+"The average survival probability was ~64% and ~59% for males with and without helpers, respectively"
+
+
+## FEEDING EFFORT ##
+
+Study: Varian-Ramos et al. 2012
+Location: Herberton Shire Reservoirs, Queensland, Australia (17°22' S, 145°25' E)
+Years: 1998 to 2000 and 2003 to 2007
+Breeding season / study period: October to February
+
+Source:
+Figure 1 - number of feeds per hour (glmm output plotted)
+
+female pair mean = 7.1
+female pair var = varianceEffect(0.8, 74) = 47.4
+female pair N = 74
+female group mean = 4.6
+female group var = varianceEffect(1.1, 14) = 16.9
+female group N = 14
+
+male pair mean = 2.7
+male pair var = varianceEffect(0.4, 74) = 11.8
+male pair N = 74
+male group mean = 0.9
+male group var = varianceEffect(0.7, 14) = 6.9
+male group N = 14
+
+"auxiliaries made 2.9 ± 0.80 provisioning trips h–1 (28% of trips)"
+helper mean = 2.9
+helper var = varianceEffect(0.80, 14) = 8.96
+helper N = 14
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Malurus splendens ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Russell & Rowley 1988
+Location: Gooseberry Hill, near Perth, Australia (31°56' S, 116°03' E)
+Years: 1973 to 1986
+Breeding season / study period: September to January
+
+Source:
+Table 6
+fPair: 55 (n=75)
+fGroup: 76 (n=128)
+mPair: 72 (n=60)
+mGroup: 71 (n=132)
+
+p < 0.01 for females
+p > 0.5 for males
+
+Method: re-sight
+
+Note:
+that these data are also reported in Rowley & Russell 1990 in Stacey & Koenig eds.
+
+
+## FEEDING EFFORT ##
+
+Study: Russell & Rowley 1997 (Fairy Wrens & Grass Wrens)
+
+Note:
+Can't access
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Melanerpes formicivorus ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Koenig & Mumme 1987
+Location: Hastings Reservation, California, USA
+Years:  to 
+Breeding season / study period: 
+
+Source:
+Table 7.7 - considering groups with adult non-breeders only
+fPair: 74.4 (n=90)
+fthree/four: 67.9 (n=56)
+ffive: 75.0 (n=32)
+mPair: 76.7 (n=146)
+mthree/four: 88.3 (n=77)
+mfive: 90.4 (n=52)
+
+group weighted averages:
+female = ((67.9*56) + (75.0*32)) / (56+32) = 70.5, (n=88)
+male = ((88.3*77)+(90.4*52)) / (77+52) = 89.2, (n=129)
+
+p > 0.2 for females and p < 0.05 for males
+
+Method: re-sight
+
+Note:
+only used group size three/four to match up with available parental effort data
+
+
+## FEEDING EFFORT ##
+
+Study: Mumme et al. 1990
+Location: Hastings Reservation, California, USA
+Years: 1979 to 1982
+Breeding season / study period: 
+
+Source:
+Figure 5 - hourly feeding rate per nestling
+
+female pair mean = 1.42
+female pair var = 1.91 (upr 95% CI), varianceEffect(((1.91-1.42)/2), 6) = 0.36
+female pair N = 6
+female group mean = 1.28
+female group var = 1.66 (upr 95% CI), varianceEffect(((1.66-1.28)/2), 12) = 0.43
+female group N = 12
+
+male pair mean = 1.57
+male pair var = 1.99 (upr 95% CI), varianceEffect(((1.99-1.57)/2), 6) = 0.27
+male pair N = 6
+male group mean = 0.74
+male group var = 0.95 (upr 95% CI), varianceEffect(((0.95-0.74)/2), 21) = 0.23
+male group N = 21
+
+Note:
+only used group size three since not clear if large groups are co-breeders or adult non-breeders
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Nesomimus parvulus ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Curry & Grant 1990
+Location: Isla Genovesa, Galapagos (0°19' N, 89°57' W)
+Years: 1980 to 1984
+Breeding season / study period: January to May
+
+Source:
+"in total, 63% of females that received help survived to the next year (n=79, 1980-4) compared to 59% of unaided females (n=126, X2=0.4, n.s.), and 66% of male breeders receiving help survived (n=82), as did 67% of unassisted males (n=129, X2=n.s.)."
+
+fPair: 59 (n=126)
+fGroup: 63 (n=79)
+mPair: 67 (n=129)
+mGroup: 66 (n=82)
+
+Method: re-sight
+
+
+## FEEDING EFFORT ##
+
+Study: Kinnaird & Grant 1982
+Location: Isla Genovesa, Galapagos (0°19' N, 89°57' W)
+Years: 1980
+Breeding season / study period: January to May
+
+Source:
+Table 4 - feeding visits to the nest per hour
+
+female pair mean = 6.6
+female pair var = 2.3
+female pair N = 5
+
+female group mean = 6
+female group var = 6.8
+female group N = 4
+
+male pair mean = 8.6
+male pair var = 12.3
+male pair N = 5
+
+male group mean = 3.75
+male group var = 2.3
+male group N = 4
+
+total helper effort = mean(c((6+4), (5+4), 4, (5+1))) = 7.25
+total helper var = var(c((6+4), (5+4), 4, (5+1))) = 7.58
+total N = 4 (i.e. groups with helpers)
+
+Note:
+also possible to calculate average helper effort from Table 4
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+					### Philetairus socius ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Paquet et al. 2015
+Location: Benfontein Nature Reserve, South Africa (28°52' S, 24°50' E)
+Years: 1999 to 2012
+Breeding season / study period: September to April
+
+Source:
+Figure 2a (age 1)
+fPair: 0.51
+fTrio: 0.69
+fFour: 0.82
+fFive: 0.91
+fSix: 0.95
+mPair: 0.99
+mTrio: 0.95
+mFour: 0.86
+mFive: 0.64
+mSix: 0.34
+
+Figure 2b (age 4)
+fPair: 0.65
+fTrio: 0.72
+fFour: 0.78
+fFive: 0.83
+fSix: 0.87
+mPair: 0.96
+mTrio: 0.91
+mFour: 0.80
+mFive: 0.63
+mSix: 0.40
+
+Figure 2c (age 7)
+fPair: 0.76
+fTrio: 0.74
+fFour: 0.72
+fFive: 0.70
+fSix: 0.68
+mPair: 0.89
+mTrio: 0.82
+mFour: 0.73
+mFive: 0.60
+mSix: 0.46
+
+Figure 2d (age 10)
+fPair: 0.85
+fTrio: 0.77
+fFour: 0.66
+fFive: 0.54
+fSix: 0.40
+mPair: 0.73
+mTrio: 0.69
+mFour: 0.64
+mFive: 0.59
+mSix: 0.53
+
+averages:
+female pair = 0.69
+mean(c(0.51, 0.65, 0.76, 0.85))
+female group = 0.74
+mean(c(0.69, 0.82, 0.91, 0.95, 0.72, 0.78, 0.83, 0.87, 0.74, 0.72, 0.70, 0.68, 0.77, 0.66, 0.54, 0.40))
+male pair = 0.89
+mean(c(0.99, 0.96, 0.89, 0.73))
+male group = 0.66
+mean(c(0.95, 0.86, 0.64, 0.34, 0.91, 0.80, 0.63, 0.40, 0.82, 0.73, 0.60, 0.46, 0.69, 0.64, 0.59, 0.53))
+
+Ns from: From the appendix: 31 females unhelped, 51 females helped & 28 males unhelped, 50 males helped (entries with only 6s in supp. data treated as unknown)
+therefore Ns:
+fPair: 31
+fGroup: 51
+mPair: 28
+mGroup: 50
+
+Method: mark-recapture
+
+Note:
+"We obtained data on breeding group composition for 168 breeders (85 females and 83 males)." 
+don't know what the error bars are
+
+
+## FEEDING EFFORT ##
+
+Study; Covas et al. 2008
+Location: Benfontein Nature Reserve, South Africa (28°53' S, 24°89' E)
+Years: 1999 to 2001
+Breeding season / study period: September to April
+
+Source:
+Figure 1 - total feeding visits to the nest per hour (to nestlings)
+can't use because breeders are not separated by sex
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Phoeniculus purpureus ###
+
+## ANNUAL SURVIVAL ##
+
+Study: du Plessis 1993
+Location: Morgan's Bay, Cape Province, South Africa (32°43' S, 28°19' E)
+Years: 1981 to 1989
+Breeding season / study period: August to January
+
+Source:
+Table 3
+fPair: 94.9 (n=60)
+fGroup: 83.3 (n=84)
+mPair: 88.1 (n=60)
+mGroup: 84.5 (n=84)
+total n for female and males = 144
+
+Method: re-sight (assumed)
+
+
+## FEEDING EFFORT ##
+
+Study: du Plessis 1991
+Location: Morgan's Bay, Cape Province, South Africa (32°43' S, 28°19' E)
+Years: 1981 to 1989
+Breeding season / study period: August to January
+
+Source:
+Fig 2 - % contribution to feeding visits
+can't use because no error reported
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Picoides borealis ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Khan & Walters 2002
+Location: multiple in Carolina
+Years: 1980 to 1997
+Breeding season / study period: April to July
+
+Source:
+"mean annual mortality of Sandhills males 23.6%; Coastal Plain males = 17.4%; Sandhills females = 30.0%; Coastal Plain females = 21.9%" and From Table 1, the change in death rate when group size increases by one:
+Sandhills
+	+ females -13.8 (n=747)
+	+ males -27.3 (n=554)
+Coastal plain
+	+ females 0.0 (n=173)
+	+ males -43.5 (n=137)
+
+taken together:
+fPairS: 56
+fGroupS: 70
+mPairS: 49
+mGroupS: 76
+fPairC: 78
+fGroupC: 78
+mPairC: 39
+mGroupC: 83
+
+weighted averages:
+female pair = 59.9
+((56*448)+(78*95)) / (448+95)
+female group = 71.7
+((70*299)+(78*78)) / (299+78)
+male pair = 47.2
+((49*332)+(39*75)) / (332+75)
+male group = 77.5
+((76*222)+(83*62)) / (222+62)
+
+Ns from:
+40% of pairs have helpers at Shandhills (Walters & Garcia 2016, Table 4.2 1980 - 1999)
+45% of pairs have helpers at Coastal Plain (Walters & Garcia 2016, Table 4.2 1980 - 1999)
+therefore Ns:
+Sandhills:
+# n = 747 females:
+0.6 * 747 	# = 448 (pair)
+0.4 * 747 	# = 299 (group)
+n = 554 males
+0.6 * 554 	# = 332 (pair)
+0.4 * 554 	# = 222 (group)
+
+Coastal plain
+n = 173 females
+0.55 * 173 	# = 95 (pair)
+0.45 * 173 	# = 78 (group)
+n = 137 males
+0.55 * 137 	# = 75 (pair)
+0.45 * 137 	# = 62 (group)
+
+total Ns
+fPair: 448 + 95 = 543
+fGroup: 299 + 78 = 377
+mPair: 332 + 75 = 407
+mGroup: 222 + 62 = 284
+
+Table 1 p values: females = 0.0399 and 0.1202, males = 0.001 and 0.0212
+
+Method: re-sight (Cox's proportional odds)
+
+Note:
+"We found that in the presence of helpers, the risk of a breeder dying declined by 21–42% for males and 0–14% for females"
+the difference between pairs and groups is correct but the absolute values aren't because I took the mean annual mortalities as values for group breeders
+
+
+## FEEDING EFFORT ##
+
+Study: ibid.
+
+Source:
+Figure 3 - mean number of feeding trips per nestlings per hour
+
+# morning:
+female pair mean = 2.6
+female pair var = varianceEffect(0.4, 13) = 2.1
+female pair N = 13
+female group mean = 2.9
+female group var = varianceEffect(0.3, 18) = 1.6
+female group N = 18
+
+male pair mean = 3.7
+male pair var = varianceEffect(0.3, 13) = 1.2
+male pair N = 13
+male group mean = 3.2
+male group var = varianceEffect(0.3, 18) = 1.6
+male group N = 18
+
+# afternoon:
+female pair mean = 2.8
+female pair var = varianceEffect(0.6, 13) = 4.7
+female pair N = 13
+female group mean = 1.8
+female group var = varianceEffect(0.2, 18) = 0.7
+female group N = 18
+
+male pair mean = 3.5
+male pair var = varianceEffect(0.3, 13) = 1.2
+male pair N = 13
+male group mean = 2.1
+male group var = varianceEffect(0.2, 18) = 0.7
+male group N = 18
+
+
+# means:
+female pair mean = (2.6 + 2.8) / 2 = 2.7
+female pair var = (2.1 + 4.7) / 2 = 3.4
+female pair N = 13
+female group mean = (2.9 + 1.8) / 2 = 2.35
+female group var = (1.6 + 0.7) / 2 = 1.15
+female group N = 18
+
+male pair mean = (3.7 + 3.5) / 2 = 3.6
+male pair var = (1.2 + 1.2) / 2 = 1.2
+male pair N = 13
+male group mean = (3.2 + 2.1) / 2 = 2.65
+male group var = (1.6 + 0.7) / 2 = 1.15
+male group N = 18
+
+helper mean = (1.8 + 1.9) / 2 = 1.85
+helper var = (varianceEffect(0.2, 18) + varianceEffect(0.3, 18)) / 2 = 1.17
+helper N = 18
+
+Note:
+N is not independent between sampling times
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Pseudopodoces humilis ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Li et al. 2015
+Location: Tianjun, Tibet (37°17' N, 99°06' E)
+Years: 2009 to 2013
+Breeding season / study period: August to January
+
+Source:
+Figure 1
+fPair: 0.41 (n=81, se=0.05)
+fGroup: 0.58 (n=72, se=0.06)
+mPair: 0.43 (n=81, se=0.06)
+mGroup: 0.75 (n=72, se=0.06)
+
+Method: re-sight
+
+
+## FEEDING EFFORT ##
+
+Study: Lu et al. 2011 ##
+Location: Dangxiong, Tibet (30°28' N, 91°05' E)
+Years: 2005 to ?
+Breeding season / study period: August to January
+
+Source:
+Figure 1 - provisioning effort
+can't use because a different study population
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+				### Sericornis frontalis ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Magrath & Yezerinac 1997
+Location: Australian National Botanic Gardens, Canberra (35°16' S, 149°6' E)
+Years: 1992 to 1995
+Breeding season / study period: July to January
+
+Source:
+"Similar analyses of annual mortality of dominant males detected no differences between pairs (8/47 males died; 17%), nonhelper groups (2/18; 10%) and helper groups (4/29; 12%;x2 = 0.7, d.f. = 2, P = 0.7)."
+
+mPair: 83 (n=47)
+mGroup: 87 (n=47)
+
+Method: re-sight
+
+Note:
+female values from this study not used because yearling females not included in sx estimation
+non-helper and helper groups combined for group survival calculations 
+
+
+Study: Magrath 2001
+Location: Australian National Botanic Gardens, Canberra (35°16' S, 149°6' E)
+Years: 1992 to 1998
+Breeding season / study period: July to January
+
+Source:
+"Yearlings in pairs did not have a different probability of surviving until the next breeding season than yearlings in groups (pair 70%, n = 33; group 85%, n = 20; log- linear model χ2 = 1·7, d.f. = 1, P = 0·2). Similarly, there was no significant difference for older females (pair 83%, n = 36; group 67%, n = 36; χ2 = 2·7, d.f. = 1, P = 0·1)"
+
+weighted averages:
+female pair = 76.8 (n=69)
+((70*33)+(83*36)) / (33+36)
+female groups = 73.4 (n=56)
+((85*20)+(67*36)) / (20+36)
+
+Method: re-sight
+
+
+## FEEDING EFFORT ##
+
+Study: Whittingham & Dunn 1998
+Location: Australian National Botanic Gardens, Canberra (35°16' S, 149°6' E)
+Years: 1992 to 1993
+Breeding season / study period: July to January
+
+Source:
+Table 2 - feeding visits per h to nestlings
+
+female pair mean = 4.5
+female pair var = varianceEffect(0.5, 15) = 3.8
+female pair N = 15
+
+female group mean = 4
+female group var = varianceEffect(0.3, 26) = 2.3
+female group N = 26
+
+male pair mean = 5.1
+male pair var = varianceEffect(0.4, 15) = 2.4
+male pair N = 15
+
+male group mean = 4.2
+male group var = varianceEffect(0.5, 26) = 6.5
+male group N = 26
+
+helper mean = 2.5
+helper var = varianceEffect(0.4, 26) = 4.2
+helper N = 26
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+					### Sialia mexicana ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Dickinson et al. 1996
+Location: Hastings Reservation, California, USA
+Years: 1983 to 1994
+Breeding season / study period: March to May
+
+Source:
+"Among birds in their third year or older; 54.8% of 31 females returned in year n + 1 after receiving help in year n, whereas 47.0% of 166 females returned after breeding without a helper. The percentage returning of 32 males that received help was 46.9%, whereas 52.6% of 173 males returned one year after they bred without help. The difference in return rates was not statistically significant for either sex (females: X2= 0.37, n = 197,p > .5; males: X2 = 0.16, n = 205,p > .65)."
+
+fPair: 47 (n=166)
+fGroup: 54.8 (n=31)
+mPair: 52.6 (n=173)
+mGroup: 46.9 (n=32)
+
+Method: re-sight
+
+
+## FEEDING EFFORT ##
+
+Study: ibid.
+
+Source:
+Figure 3a - feeds / hour (to nestlings)
+
+female pair mean = 7.6
+female pair var = varianceEffect(0.1, 723) = 7.23
+female pair N = 723
+
+female group mean = 6.1
+female group var = varianceEffect(0.8, 42) = 26.88
+female group N = 42
+
+male pair mean = 7.4
+male pair var = varianceEffect(0.1, 723) = 7.23
+male pair N = 723
+
+male group mean = 6.1
+male group var = varianceEffect(0.7, 42) = 20.58
+male group N = 42
+
+helper mean = 6.0
+helper var = varianceEffect(0.6, 42) = 15.12
+helper N = 42
+
+Note:
+n reported in the text: "Both the total feeds per hour and die total feeds per nestling per hour were statistically higher at 42 first nests with adult helpers than at 723 first nests without helpers"
+data on feeds / nestling / hour available from fig 3b
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+					### Sitta pygmaea ###
+
+## ANNUAL SURVIVAL ##
+
+Study: Sydeman 1989
+Location: near Flagstaff, Arizona, USA (35°03' N, 111°32' W)
+Years: 1981 to 1984
+Breeding season / study period: May to July
+
+Source:
+Figure 4
+
+fPair81/82: 59 (n=15)
+fGroup81/82: 49 (n=4)
+mPair81/82: 58 (n=12)
+mGroup81/82: 67 (n=3)
+
+fPair82/83: 40 (n=15)
+fGroup82/83: 38 (n=13)
+mPair82/83: 54 (n=19)
+mGroup82/83: 42 (n=12)
+
+fPair83/84: 63 (n=13)
+fGroup83/84: 64 (n=8)
+mPair83/84: 75 (n=20)
+mGroup83/84: 99 (n=7)
+
+weighted averages:
+female pair = 53.6 (n=43)
+((59*15)+(40*15)+(63*13)) / (15+15+13)
+female groups = 48.1 (n=25)
+((49*4)+(38*13)+(64*8)) / (4+13+8)
+male pair = 63.2 (n=51)
+((58*12)+(54*19)+(75*20)) / (12+19+20)
+male groups = 63.6 (n=22)
+((67*3)+(42*12)+(99*7)) / (3+12+7)
+
+Method: re-sight
+
+
+## FEEDING EFFORT ##
+
+Study: ibid.
+
+Source:
+Table 3 -  nestling feeding rate
+
+female pair mean = 7.33
+female pair var = 7.75^2 = 60.06
+female pair N = 40
+
+female group mean = 4.70
+female group var = 4.07^2 = 16.57
+female group N = 46
+
+male pair mean = 12.73
+male pair var = 5.51^2 = 30.36
+male pair N = 40
+
+male group mean = 13.71
+male group var = 6.31^2 = 39.82
+male group N = 46
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+						THE END
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
